@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+    <style>
+        body
+        {
+            background-color: darkcyan;
+            font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+            
+        }
+    </style>
+
+    <script type="text/javascript">
+        function Check()
+        {
+            var tm = document.getElementById("inputData").value;
+            if (tm === ""){} // fai niente
+            else
+            {
+                var Image = document.getElementById('Image');
+                if(tm > 18)
+                {
+                    Image.src = "src/img/moon.png";
+                }
+                else
+                {
+                    Image.src = "src/img/sun.png";
+                }
+            }
+        }
+    </script>
+</head>
+
+<body>
+    <input type="text" id="inputData">
+    <button onclick="Check()">Avvia</button>
+    <br>
+    <img id="Image" src="src/img/sun.png" width="660" height="660">
+</body>
+
+</html>
